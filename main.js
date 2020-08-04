@@ -15,7 +15,7 @@ fs.recurse('./toConvert', function(filepath, relative,filename){
     img.metadata()
     .then(function(data){
 
-        if(data.width < 600 || data.width > 600){
+        if(data.width < 600 || data.height < 600){
             defaultSize = 600;
             adjustImg(filepath, name, defaultSize, extension);
         
